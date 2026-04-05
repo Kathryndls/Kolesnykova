@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Владимир Акробат - Профессиональный акробат</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="logo">🎪 Владимир Акробат</div>
+                <button class="burger-menu" id="burgerBtn" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" onclick="closeMenu()">Главная</a></li>
+                    <li><a href="#about" onclick="closeMenu()">Обо мне</a></li>
+                    <li><a href="#gallery" onclick="closeMenu()">Портфолио</a></li>
+                    <li><a href="#services" onclick="closeMenu()">Услуги</a></li>
+                    <li><a href="#contact" onclick="closeMenu()">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Потрясающие акробатические трюки</h1>
+                <p>Профессиональный акробат с 15-летним опытом выступлений</p>
+                <button class="btn btn-primary" onclick="scrollToSection('contact')">Заказать выступление</button>
+            </div>
+            <div class="hero-image">
+                <div class="placeholder-hero">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500'%3E%3Crect fill='%23007bff' width='400' height='500'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' fill='white' font-size='24' font-family='Arial'%3EФото акробата%3C/text%3E%3C/svg%3E" alt="Акробат в действии">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Обо мне</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Владимир Петров</h3>
+                    <p>Профессиональный акробат с более чем 15 годами опыта. Выступал на крупных событиях, фестивалях и международных соревнованиях. Специализируюсь на высотных трюках, партнёрской акробатике и воздушной гимнастике.</p>
+                    <ul class="skills-list">
+                        <li>✓ Высотные трюки</li>
+                        <li>✓ Партнёрская акробатика</li>
+                        <li>✓ Воздушная гимнастика</li>
+                        <li>✓ Жонглирование</li>
+                        <li>✓ Балансирование</li>
+                        <li>✓ Постановочные выступления</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='350' height='400'%3E%3Crect fill='%2328a745' width='350' height='400'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' fill='white' font-size='20' font-family='Arial'%3EПортрет акробата%3C/text%3E%3C/svg%3E" alt="Портрет">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery/Portfolio -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Портфолио</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%23ff6b6b' width='300' height='300'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' fill='white' font-size='18' font-family='Arial'%3EТрюк 1%3C/text%3E%3C/svg%3E" alt="Трюк 1">
+                    <h3>Высотный трюк</h3>
+                </div>
+                <div class="gallery-item">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%234ecdc4' width='300' height='300'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' fill='white' font-size='18' font-family='Arial'%3EТрюк 2%3C/text%3E%3C/svg%3E" alt="Трюк 2">
+                    <h3>Партнёрская акробатика</h3>
+                </div>
+                <div class="gallery-item">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%2345b7d1' width='300' height='300'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' fill='white' font-size='18' font-family='Arial'%3EТрюк 3%3C/text%3E%3C/svg%3E" alt="Трюк 3">
+                    <h3>Воздушная гимнастика</h3>
+                </div>
+                <div class="gallery-item">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Crect fill='%23f9ca24' width='300' height='300'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' fill='white' font-size='18' font-family='Arial'%3EТрюк 4%3C/text%3E%3C/svg%3E" alt="Трюк 4">
+                    <h3>Балансирование</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Мои услуги</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎭</div>
+                    <h3>Корпоративные события</h3>
+                    <p>Впечатляющие трюки для конференций, праздников и деловых мероприятий</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🎪</div>
+                    <h3>Уличные выступления</h3>
+                    <p>Развлечение для фестивалей, ярмарок и массовых мероприятий</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📹</div>
+                    <h3>Постановочные трюки</h3>
+                    <p>Трюки для фильмов, клипов и рекламных проектов</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👥</div>
+                    <h3>Обучение</h3>
+                    <p>Мастер-классы и тренировки для начинающих акробатов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Отзывы клиентов</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"Потрясающее выступление! Все гости были в восторге от трюков Владимира."</p>
+                    <strong>— Иван Сидоров, организатор события</strong>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Профессионал своего дела. Безопасность и качество выполнения на высочайшем уровне."</p>
+                    <strong>— Мария Петрова, режиссёр</strong>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Лучший выбор для нашего корпоративного события. Спасибо за настоящий праздник!"</p>
+                    <strong>— Дмитрий Иванов, CEO компании</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Свяжитесь со мной</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Контактная информация</h3>
+                    <p><strong>Email:</strong> vladimir@acrobat.ru</p>
+                    <p><strong>Телефон:</strong> +7 (999) 123-45-67</p>
+                    <p><strong>Город:</strong> Москва</p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn">Instagram</a>
+                        <a href="#" class="social-btn">Facebook</a>
+                        <a href="#" class="social-btn">YouTube</a>
+                    </div>
+                </div>
+                <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="email" placeholder="Ваш email" required>
+                    <textarea placeholder="Ваше сообщение" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Владимир Петров - Профессиональный акробат. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
