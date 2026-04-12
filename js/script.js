@@ -51,6 +51,39 @@ function handleFormSubmit(event) {
     form.reset();
 }
 
+// Video modal functionality
+function openVideoModal(videoId) {
+    console.log('Opening video modal for:', videoId);
+    // Create modal overlay
+    const modal = document.createElement('div');
+    modal.className = 'video-modal';
+    modal.innerHTML = `
+        <div class="video-modal-content">
+            <span class="video-modal-close" onclick="closeVideoModal()">&times;</span>
+            <iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1" frameborder="0" allowfullscreen></iframe>
+        </div>
+    `;
+    document.body.appendChild(modal);
+    
+    // Prevent body scroll
+    document.body.style.overflow = 'hidden';
+}
+
+function closeVideoModal() {
+    const modal = document.querySelector('.video-modal');
+    if (modal) {
+        modal.remove();
+        document.body.style.overflow = 'auto';
+    }
+}
+
+// Close modal when clicking outside
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('video-modal')) {
+        closeVideoModal();
+    }
+});
+
 // Animate elements on scroll
 document.addEventListener('DOMContentLoaded', function() {
     // Add animation classes to elements when they come into view
@@ -97,4 +130,52 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             scrollToSection(href.substring(1));
         }
     });
+});
+
+// Photo slider functionality
+let currentSlide = 0;
+const totalSlides = 6;
+
+function updateSlider() {
+    const sliderTrack = document.querySelector('.slider-track');
+    const offset = currentSlide * (100 / 6);
+    sliderTrack.style.transform = `translateX(-${offset}%)`;
+    
+    // Update active slide class
+    document.querySelectorAll('.slide').forEach((slide, index) => {
+        slide.classList.remove('active');
+        // The center slide is at index (currentSlide + 2) % totalSlides  
+        if (index === (currentSlide + 2) % totalSlides) {
+            slide.classList.add('active');
+        }
+    });
+    
+    // Update dots
+    document.querySelectorAll('.dot').forEach((dot, index) => {
+        if (index === currentSlide) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    });
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateSlider();
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlider();
+}
+
+function goToSlide(index) {
+    currentSlide = index;
+    updateSlider();
+}
+
+// Initialize slider on page load
+document.addEventListener('DOMContentLoaded', function() {
+    updateSlider();
 });
