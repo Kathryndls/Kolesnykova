@@ -45,75 +45,31 @@ function handleFormSubmit(event) {
     const formData = new FormData(form);
     
     // Show success message
-    alert('Thank you! Your message has been sent. I will get back to you soon.');
+    alert('Спасибо! Ваше сообщение было отправлено. Я свяжусь с вами в ближайшее время.');
     
     // Reset form
     form.reset();
 }
 
-// Video rotator
-let currentVideoIndex = 0;
-const videos = [
-    { type: 'video', element: document.getElementById('video-player') },
-    { type: 'placeholder', element: document.getElementById('placeholder-2') },
-    { type: 'placeholder', element: document.getElementById('placeholder-3') }
-];
-
-function rotateVideos() {
-    // Hide current video/placeholder
-    videos[currentVideoIndex].element.style.display = 'none';
-    
-    // Move to next
-    currentVideoIndex = (currentVideoIndex + 1) % videos.length;
-    
-    // Show next video/placeholder
-    videos[currentVideoIndex].element.style.display = 'block';
-    
-    // If it's a video, play it
-    if (videos[currentVideoIndex].type === 'video') {
-        videos[currentVideoIndex].element.play();
-    }
-}
-
-// Start rotation when page loads
+// Animate elements on scroll
 document.addEventListener('DOMContentLoaded', function() {
-    // ... existing code ...
-    
-    // Start video rotation every 3 seconds
-    setInterval(rotateVideos, 3000);
-    
-    // Hero video rotator
-    let currentHeroVideoIndex = 0;
-    const heroVideos = [
-        { type: 'video', element: document.getElementById('hero-video-3') },
-        { type: 'video', element: document.getElementById('hero-video-2') },
-        { type: 'video', element: document.getElementById('hero-video-1') }
-    ];
+    // Add animation classes to elements when they come into view
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
 
-    function rotateHeroVideos() {
-        // Fade out current to semi-transparent for overlap effect
-        heroVideos[currentHeroVideoIndex].element.style.opacity = '0.1';
-        
-        setTimeout(() => {
-            // Hide current
-            heroVideos[currentHeroVideoIndex].element.style.display = 'none';
-            
-            // Move to next
-            currentHeroVideoIndex = (currentHeroVideoIndex + 1) % heroVideos.length;
-            
-            // Show next with full opacity
-            heroVideos[currentHeroVideoIndex].element.style.display = 'block';
-            heroVideos[currentHeroVideoIndex].element.style.opacity = '1';
-            
-            // If it's a video, play it
-            if (heroVideos[currentHeroVideoIndex].type === 'video') {
-                heroVideos[currentHeroVideoIndex].element.play();
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
             }
-        }, 200); // Shorter delay for overlap
-    }
-    
-    // Start hero video rotation every 3 seconds
-    setInterval(rotateHeroVideos, 3000);
+        });
+    }, observerOptions);
+
+    // Observe gallery items, service cards, and testimonial cards
+    const elements = document.querySelectorAll('.gallery-item, .service-card, .testimonial-card');
+    elements.forEach(el => observer.observe(el));
 });
 
 // Add CSS animation

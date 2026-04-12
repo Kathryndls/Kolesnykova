@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kateryna Kolesnykova — Performance Artist</title>
+    <title>Kateryna Kolesnykova — Aerial Artist, Dancer, Choreographer</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="navbar-content">
-                <div class="logo">Kateryna Kolesnykova</div>
+                <a href="#contact" class="logo-btn">Contact Me</a>
                 <button class="burger-menu" id="burgerBtn" onclick="toggleMenu()">
                     <span></span>
                     <span></span>
@@ -21,180 +21,318 @@
                     <li><a href="#promo" onclick="closeMenu()">Promo</a></li>
                     <li><a href="#about" onclick="closeMenu()">About me</a></li>
                     <li><a href="#performance" onclick="closeMenu()">Performance</a></li>
-                    <li><a href="#photo" onclick="closeMenu()">Photo</a></li>
+                    <li><a href="#photo" onclick="closeMenu()">Gallery</a></li>
                     <li><a href="#contact" onclick="closeMenu()">Contact me</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Promo Section -->
-    <section id="promo" class="hero">
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
         <div class="container">
             <div class="hero-grid">
-                <div class="hero-video-panel">
-                    <div class="video-rotator">
-                        <video id="hero-video-3" class="hero-video" autoplay muted loop playsinline>
-                            <source src="videos/video-3.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <video id="hero-video-2" class="hero-video" autoplay muted loop playsinline style="display: none;">
-                            <source src="videos/video-2.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <video id="hero-video-1" class="hero-video" autoplay muted loop playsinline style="display: none;">
-                            <source src="videos/video-1.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                <div class="hero-image fade-in-left">
+                    <img src="photo/header.jpg" alt="Kateryna Header">
+                </div>
+                <div class="hero-content fade-in-right">
+                    <div class="hero-text">
+                        <p class="hero-subtitle">AERIAL ARTIST · CHOREOGRAPHER · DANCER</p>
+                        <h1 class="hero-title">Kateryna<br>Kolesnykova</h1>
+                        <p class="hero-quote">"My works are made with soul and imbued with meaning, so they will always remain relevant"</p>
+                        <div class="hero-badges">
+                            <span class="hero-badge">15+ years experience</span>
+                            <span class="hero-badge">500+ shows & festivals</span>
+                        </div>
+                        <button class="btn btn-primary btn-large" onclick="scrollToSection('performance')">Watch Videos</button>
                     </div>
                 </div>
-                <div class="hero-content">
-                    <span class="eyebrow">Aerial artist · dancer · choreographer</span>
-                    <h1>Kateryna Kolesnykova</h1>
-                    <p>Modern circus, pole dance, silks and stage choreography designed for live events and immersive shows.</p>
-                    <div class="hero-meta">
-                        <span>15+ years experience</span>
-                        <span>Festival stages & brand projects</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Video Section -->
+    <section id="promo" class="promo-section">
+        <div class="container">
+            <div class="section-label-wrapper fade-in-up">
+                <span class="section-label">Promo Video</span>
+            </div>
+            <div class="video-preview-wrapper fade-in-up">
+                <div class="video-preview" onclick="openVideoModal('7ottA-FO1Uc')">
+                    <img id="promoThumb" src="https://img.youtube.com/vi/7ottA-FO1Uc/maxresdefault.jpg" alt="Promo Video">
+                    <div class="play-button">
+                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                            <circle cx="40" cy="40" r="38" stroke="white" stroke-width="2"/>
+                            <polygon points="32,20 32,60 65,40" fill="white"/>
+                        </svg>
                     </div>
-                    <button class="btn btn-primary" onclick="scrollToSection('contact')">Book a show</button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="about-section">
         <div class="container">
-            <div class="section-intro">
-                <span class="section-label">About me</span>
-                <h2>Stage presence rooted in movement and emotion</h2>
-                <p>From aerial flow to choreography, I create authentic performances that connect with audiences and bring brands to life.</p>
+            <div class="section-label-wrapper fade-in-up">
+                <span class="section-label">About Me</span>
             </div>
-            <div class="about-grid">
-                <div class="about-cards">
-                    <div class="info-card">
-                        <h3>10+ years on stage</h3>
-                        <p>Live shows for cruise lines, festivals and international productions.</p>
+
+            <div class="about-content fade-in-up">
+                <div class="about-main">
+                    <p class=\"about-intro-text fade-in-up\">A dynamic dancer with 10+ years of experience in contemporary, pole dance, stretching, jazz-funk and aerial gymnastics. Creating original choreography, performing on stage and camera with international recognition and festival wins.</p>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Years Experience</div>
                     </div>
-                    <div class="info-card">
-                        <h3>Costa Cruises tours</h3>
-                        <p>High-level aerial acts and dance performances for premium cruise audiences.</p>
+                    <div class="stat-item">
+                        <div class="stat-number">500+ </div>
+                        <div class="stat-label">shows</div>
                     </div>
-                    <div class="info-card">
-                        <h3>Festival & brand shows</h3>
-                        <p>Creative choreography for events, brand activations and special projects.</p>
+                    <div class="stat-item">
+                        <div class="stat-number">45+</div>
+                        <div class="stat-label">Festival Wins</div>
                     </div>
-                    <div class="info-card">
-                        <h3>Choreography & classes</h3>
-                        <p>Workshops, routines and creative direction for solo and group performers.</p>
+                    <div class="stat-item">
+                        <div class="stat-number">6</div>
+                        <div class="stat-label">Years Teaching</div>
                     </div>
                 </div>
-                <div class="about-image">
-                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='450' height='540'%3E%3Crect fill='%23000000' width='450' height='540'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23ffffff' font-size='24' font-family='Arial'%3EKateryna%20portrait%3C/text%3E%3C/svg%3E" alt="Kateryna portrait">
+
+                <div class="about-details">
+                    <div class="detail-section">
+                        <h3>Professional Experience</h3>
+                        <ul>
+                            <li>Creates original choreography, teaches & performs</li>
+                            <li>2 years commercial teaching (pole dance & stretching)</li>
+                            <li>5+ years as soloist & choreographer — 15+ major projects</li>
+                            <li>Winner of 15+ international festivals (1st places & Grand Prix)</li>
+                            <li>Featured in music videos & short films</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3>Physical Profile</h3>
+                        <div class="profile-grid">
+                            <div class="profile-item">
+                                <span class="profile-label">Height:</span>
+                                <span class="profile-value">167 cm</span>
+                            </div>
+                            <div class="profile-item">
+                                <span class="profile-label">Weight:</span>
+                                <span class="profile-value">52 kg</span>
+                            </div>
+                            <div class="profile-item">
+                                <span class="profile-label">Shoe size:</span>
+                                <span class="profile-value">37</span>
+                            </div>
+                            <div class="profile-item">
+                                <span class="profile-label">Eye color:</span>
+                                <span class="profile-value">Green</span>
+                            </div>
+                            <div class="profile-item">
+                                <span class="profile-label">Hair:</span>
+                                <span class="profile-value">Light brown, below shoulders</span>
+                            </div>
+                            <div class="profile-item">
+                                <span class="profile-label">Measurements:</span>
+                                <span class="profile-value">83-63-82 cm</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h3>Education & Training</h3>
+                        <ul>
+                            <li>School of Exemplary Contemporary Dance "Carnival" (2014–2025)</li>
+                            <li>Viva Models modeling school (2019–2020)</li>
+                            <li>Professional show work on Costa cruise ship (2025)</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Photo Section -->
-    <section id="photo" class="video-section">
+    <!-- Performance / Video Gallery -->
+    <section id="performance" class="performance-section">
         <div class="container">
-            <div class="section-intro">
-                <span class="section-label">Photo</span>
-                <h2>Video showreel</h2>
-                <p>Live performance clips and stage moments captured from aerial, pole and dance projects.</p>
-            </div>
-            <div class="video-rotator">
-                <video id="video-player" autoplay muted loop playsinline>
-                    <source src="videos/video-1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="video-placeholder" id="placeholder-2" style="display: none;">
-                    <div class="placeholder-content">Video 2 (add video-2.mp4)</div>
-                </div>
-                <div class="video-placeholder" id="placeholder-3" style="display: none;">
-                    <div class="placeholder-content">Video 3 (add video-3.mp4)</div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Performance Section -->
-    <section id="performance" class="performance">
-        <div class="container">
-            <div class="section-intro">
-                <span class="section-label">Performance</span>
-                <h2>Stage disciplines</h2>
-                <p>Crafted acts for solo and group formats in dance, aerial and live choreography.</p>
+            <div class="section-label-wrapper fade-in-up">
+                <span class="section-label">Performance Gallery</span>
+                            <div class="disclaimer disclaimer-top fade-in-up">
+                <p>All choreography in the performances is created by Kateryna Kolesnikova.</p>
+                <p>All videos are shot in one continuous take with no cuts, edits, or digital processing — featuring only live music recorded in real time.</p>
             </div>
+            </div>
+
             <div class="performance-grid">
-                <div class="performance-card">
-                    <h3>Pole dance</h3>
-                    <p>Strong, fluid and expressive bodywork for theatrical and festival stages.</p>
+                <div class="performance-card fade-in-up" onclick="openVideoModal('WTnIEn-EPHQ')">
+                    <div class="performance-preview">
+                        <img src="https://img.youtube.com/vi/WTnIEn-EPHQ/maxresdefault.jpg" alt="Pole Dance">
+                        <div class="play-button-small">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                <circle cx="30" cy="30" r="28" stroke="white" stroke-width="2"/>
+                                <polygon points="24,15 24,45 49,30" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="performance-title">Pole Dance</h3>
                 </div>
-                <div class="performance-card">
-                    <h3>Hoop dance</h3>
-                    <p>Dynamic hoop movement with rhythmic transitions and aerial flow.</p>
+
+                <div class="performance-card fade-in-up" onclick="openVideoModal('MNyZgq4Gyf4')">
+                    <div class="performance-preview">
+                        <img src="https://img.youtube.com/vi/MNyZgq4Gyf4/maxresdefault.jpg" alt="Hoop Dance">
+                        <div class="play-button-small">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                <circle cx="30" cy="30" r="28" stroke="white" stroke-width="2"/>
+                                <polygon points="24,15 24,45 49,30" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="performance-title">Hoop Dance</h3>
                 </div>
-                <div class="performance-card">
-                    <h3>Silks</h3>
-                    <p>High-impact aerial silks choreography with graceful ascents and drops.</p>
+
+                <div class="performance-card fade-in-up" onclick="openVideoModal('Ft_MrdFQIBU')">
+                    <div class="performance-preview">
+                        <img src="https://img.youtube.com/vi/Ft_MrdFQIBU/maxresdefault.jpg" alt="Silks Dance">
+                        <div class="play-button-small">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                <circle cx="30" cy="30" r="28" stroke="white" stroke-width="2"/>
+                                <polygon points="24,15 24,45 49,30" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="performance-title">Silks Dance</h3>
                 </div>
-                <div class="performance-card">
-                    <h3>Solo dance</h3>
-                    <p>Personal, emotive acts shaped around your stage concept and music.</p>
+
+                <div class="performance-card fade-in-up" onclick="openVideoModal('KRRIQXAvViY')">
+                    <div class="performance-preview">
+                        <img src="https://img.youtube.com/vi/KRRIQXAvViY/maxresdefault.jpg" alt="Strap Dance">
+                        <div class="play-button-small">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                <circle cx="30" cy="30" r="28" stroke="white" stroke-width="2"/>
+                                <polygon points="24,15 24,45 49,30" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="performance-title">Strap Dance</h3>
                 </div>
-                <div class="performance-card">
-                    <h3>Group dance</h3>
-                    <p>Collective choreography and production for ensemble performances.</p>
+
+                <div class="performance-card fade-in-up" onclick="openVideoModal('oXliGodVeAI')">
+                    <div class="performance-preview">
+                        <img src="https://img.youtube.com/vi/oXliGodVeAI/maxresdefault.jpg" alt="Group Dance">
+                        <div class="play-button-small">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                <circle cx="30" cy="30" r="28" stroke="white" stroke-width="2"/>
+                                <polygon points="24,15 24,45 49,30" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="performance-title">Group Dance</h3>
+                    <p class="credit-note">Soloist and Choreographer — Kateryna Kolesnykova</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials">
+    <!-- Photo Gallery -->
+    <section id="photo" class="photo-section">
         <div class="container">
-            <h2>Client testimonials</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p>"Amazing performance! All guests were thrilled by the acrobatic moments."</p>
-                    <strong>— Ivan Sidorov, event producer</strong>
+            <div class="section-label-wrapper fade-in-up">
+                <span class="section-label">Photo Gallery</span>
+            </div>
+
+            <div class="photo-slider fade-in-up">
+                <div class="slider-container">
+                    <div class="slider-track">
+                        <div class="slide">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='800'%3E%3Crect fill='%23333333' width='600' height='800'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23999999' font-size='24' font-family='Arial'%3EPhoto 1%3C/text%3E%3C/svg%3E" alt="Gallery photo 1">
+                        </div>
+                        <div class="slide">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='800'%3E%3Crect fill='%23333333' width='600' height='800'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23999999' font-size='24' font-family='Arial'%3EPhoto 2%3C/text%3E%3C/svg%3E" alt="Gallery photo 2">
+                        </div>
+                        <div class="slide">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='800'%3E%3Crect fill='%23333333' width='600' height='800'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23999999' font-size='24' font-family='Arial'%3EPhoto 3%3C/text%3E%3C/svg%3E" alt="Gallery photo 3">
+                        </div>
+                        <div class="slide">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='800'%3E%3Crect fill='%23333333' width='600' height='800'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23999999' font-size='24' font-family='Arial'%3EPhoto 4%3C/text%3E%3C/svg%3E" alt="Gallery photo 4">
+                        </div>
+                        <div class="slide">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='800'%3E%3Crect fill='%23333333' width='600' height='800'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23999999' font-size='24' font-family='Arial'%3EPhoto 5%3C/text%3E%3C/svg%3E" alt="Gallery photo 5">
+                        </div>
+                        <div class="slide">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='800'%3E%3Crect fill='%23333333' width='600' height='800'/%3E%3Ctext x='50%' y='50%' text-anchor='middle' dy='.3em' fill='%23999999' font-size='24' font-family='Arial'%3EPhoto 6%3C/text%3E%3C/svg%3E" alt="Gallery photo 6">
+                        </div>
+                    </div>
                 </div>
-                <div class="testimonial-card">
-                    <p>"A true professional. The safety and execution were outstanding."</p>
-                    <strong>— Maria Petrova, director</strong>
-                </div>
-                <div class="testimonial-card">
-                    <p>"The best choice for our corporate event. Thank you for an unforgettable show!"</p>
-                    <strong>— Dmitry Ivanov, CEO</strong>
+
+                <button class="slider-btn prev" onclick="prevSlide()">&#10094;</button>
+                <button class="slider-btn next" onclick="nextSlide()">&#10095;</button>
+
+                <div class="slider-dots">
+                    <span class="dot active" onclick="goToSlide(0)"></span>
+                    <span class="dot" onclick="goToSlide(1)"></span>
+                    <span class="dot" onclick="goToSlide(2)"></span>
+                    <span class="dot" onclick="goToSlide(3)"></span>
+                    <span class="dot" onclick="goToSlide(4)"></span>
+                    <span class="dot" onclick="goToSlide(5)"></span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact-section">
         <div class="container">
-            <h2>Contact me</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Contact information</h3>
-                    <p><strong>Email:</strong> kateryna@example.com</p>
-                    <p><strong>Phone:</strong> +1 (555) 123-4567</p>
-                    <p><strong>Location:</strong> Worldwide</p>
-                    <div class="social-links">
-                        <a href="#" class="social-btn">Instagram</a>
-                        <a href="#" class="social-btn">Facebook</a>
-                        <a href="#" class="social-btn">YouTube</a>
-                    </div>
+            <div class="section-label-wrapper fade-in-up">
+                <span class="section-label">Contact me</span>
+            </div>
+
+            <div class="contact-content fade-in-up">
+                <div class="contact-row">
+                    <a href="#" class="contact-icon whatsapp" target="_blank">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="contact-icon telegram" target="_blank">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-1.447-1.238-1.447-1.238-.514-.385-.009-.592.28-.592.276 0 .932.29 2.07 1.353 1.638 1.514 2.857 2.79 3.262 3.094.13.094.248.142.374.142.09 0 .181-.013.278-.043.224-.064.52-.224.52-.224.11-.084.24-.106.374-.106.11 0 .22.043.374.106 0 0 .297.16.52.224.097.03.188.043.278.043.126 0 .244-.048.374-.142.405-.304 1.617-1.58 2.255-3.094.74-1.79 1.323-3.886 1.323-3.886.08-.374.247-.564.247-.564.06-.106.258-.138.258-.138.06-.023.178-.05.178-.05.154-.02.257-.03.257-.03.06-.006.178-.01.178-.01.06 0 .178.004.178.004.06 0 .178.01.178.01.06.006.178.03.178.03.06.023.178.05.178.05.1.032.22.064.32.086.1.022.22.034.32.086.1.052.22.094.32.086.1-.008.22-.05.32-.086.1-.036.22-.078.32-.086-.1-.032-.22-.064-.32-.086-.1-.022-.22-.034-.32-.086-.1-.052-.22-.094-.32-.086-.1 0-.22.01-.32.086-.1.076-.22.118-.32.086-.1-.032-.22-.064-.32-.086-.1-.022-.22-.034-.32-.086-.1-.052-.22-.094-.32-.086z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="contact-icon viber" target="_blank">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.014 1.661C6.518 1.661 2.064 5.204 2.064 9.63c0 2.851 1.614 5.406 4.115 7.005L3.057 21.34l5.053-2.814c1.357.374 2.811.574 4.326.574 5.496 0 9.95-3.543 9.95-7.969S17.51 1.661 12.014 1.661zm-.011 1.597c4.626 0 8.383 3.05 8.383 6.772 0 3.722-3.757 6.772-8.383 6.772-1.406 0-2.747-.28-3.957-.797l-.703-.282-3.523 1.958 1.886-3.617-.246-.369c-2.147-1.439-3.52-3.627-3.52-6.085 0-3.722 3.757-6.772 8.383-6.772zm-1.286 3.373c-.198 0-.36.162-.36.36v.72c0 .198.162.36.36.36h2.572c.198 0 .36-.162.36-.36v-.72c0-.198-.162-.36-.36-.36h-2.572zm0 2.16c-.198 0-.36.162-.36.36v.72c0 .198.162.36.36.36h3.429c.198 0 .36-.162.36-.36v-.72c0-.198-.162-.36-.36-.36h-3.429zm0 2.16c-.198 0-.36.162-.36.36v.72c0 .198.162.36.36.36h3.429c.198 0 .36-.162.36-.36v-.72c0-.198-.162-.36-.36-.36h-3.429z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="contact-icon email" target="_blank">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                    </a>
                 </div>
-                <form class="contact-form" onsubmit="handleFormSubmit(event)">
-                    <input type="text" placeholder="Your name" required>
-                    <input type="email" placeholder="Your email" required>
-                    <textarea placeholder="Your message" rows="5" required></textarea>
-                    <button type="submit" class="btn btn-primary">Send message</button>
-                </form>
+
+                <div class="contact-row">
+                    <a href="#" class="contact-icon youtube" target="_blank">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="contact-icon tiktok" target="_blank">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="contact-icon instagram" target="_blank">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.017 0C8.396 0 7.996.014 6.79.067 5.584.12 4.775.302 4.082.566c-.693.264-1.28.616-1.87 1.206C1.622 2.362 1.27 2.949.999 3.642c-.264.693-.446 1.502-.499 2.708C.414 7.556.4 7.956.4 11.577c0 3.621.014 4.021.067 5.227.053 1.206.235 2.015.499 2.708.271.693.623 1.28 1.213 1.87.59.59 1.177.942 1.87 1.213.693.264 1.502.446 2.708.499C7.556 23.586 7.956 23.6 11.577 23.6c3.621 0 4.021-.014 5.227-.067 1.206-.053 2.015-.235 2.708-.499.693-.271 1.28-.623 1.87-1.213.59-.59.942-1.177 1.213-1.87.264-.693.446-1.502.499-2.708.067-1.206.081-1.606.081-5.227 0-3.621-.014-4.021-.067-5.227-.053-1.206-.235-2.015-.499-2.708-.271-.693-.623-1.28-1.213-1.87-.59-.59-1.177-.942-1.87-1.213C18.238.302 17.429.12 16.223.067 15.017.014 14.617 0 11.996 0h.021zm0 2.163c3.532 0 3.958.013 5.357.073 1.37.058 2.113.29 2.616.482.621.24 1.063.557 1.532 1.026.469.469.786 1.011 1.026 1.532.192.503.424 1.246.482 2.616.06 1.399.073 1.825.073 5.357s-.013 3.958-.073 5.357c-.058 1.37-.29 2.113-.482 2.616-.24.621-.557 1.063-1.026 1.532-.469.469-1.011.786-1.532 1.026-.503.192-1.246.424-2.616.482-1.399.06-1.825.073-5.357.073s-3.958-.013-5.357-.073c-1.37-.058-2.113-.29-2.616-.482-.621-.24-1.063-.557-1.532-1.026-.469-.469-.786-1.011-1.026-1.532-.192-.503-.424-1.246-.482-2.616-.06-1.399-.073-1.825-.073-5.357s.013-3.958.073-5.357c.058-1.37.29-2.113.482-2.616.24-.621.557-1.063 1.026-1.532.469-.469 1.011-.786 1.532-1.026.503-.192 1.246-.424 2.616-.482 1.399-.06 1.825-.073 5.357-.073zm0 3.826c-3.671 0-6.641 2.97-6.641 6.641s2.97 6.641 6.641 6.641 6.641-2.97 6.641-6.641-2.97-6.641-6.641-6.641zm0 10.918c-2.365 0-4.277-1.912-4.277-4.277s1.912-4.277 4.277-4.277 4.277 1.912 4.277 4.277-1.912 4.277-4.277 4.277zm7.875-11.045c-.916 0-1.66-.744-1.66-1.66s.744-1.66 1.66-1.66 1.66.744 1.66 1.66-.744 1.66-1.66 1.66z"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -202,9 +340,19 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Kateryna Kolesnykova — Performance Artist. All rights reserved.</p>
+            <p>&copy; 2026 Kateryna Kolesnykova. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal" onclick="closeVideoModal(event)">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeVideoModal()">&times;</button>
+            <iframe id="videoFrame" width="100%" height="100%" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Lightbox (removed - now using slider) -->
 
     <script src="js/script.js"></script>
 </body>
