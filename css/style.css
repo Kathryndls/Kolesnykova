@@ -27,6 +27,7 @@ body {
     background: var(--bg);
     min-height: 100vh;
     overflow-x: hidden;
+    padding-top: 70px;
 }
 
 a {
@@ -129,11 +130,13 @@ button {
 
 /* Navigation */
 .navbar {
-    background: #000;
+    background: #000000;
     backdrop-filter: blur(20px);
     padding: 0.8rem 0;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
     border-bottom: none;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
@@ -457,8 +460,15 @@ button {
 
 
 .video-preview-wrapper {
-    max-width: 900px;
+    max-width: 1350px;
     margin: 0 auto;
+}
+
+@media (max-width: 676px) {
+    .video-preview-wrapper {
+        max-width: 100%;
+    }
+}
 }
 
 .video-preview {
@@ -516,6 +526,12 @@ button {
     color: var(--muted);
     max-width: 700px;
     margin: 0 auto;
+}
+
+.company-name {
+    color: rgba(255, 31, 53, 0.75);
+    font-weight: 600;
+    font-style: italic;
 }
 
 .about-stats {
@@ -612,6 +628,32 @@ button {
     color: var(--accent);
     font-weight: 700;
     font-size: 1.2rem;
+}
+
+.experience-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.experience-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+}
+
+.experience-description {
+    font-size: 0.95rem;
+    color: var(--muted);
+    line-height: 1.6;
+}
 }
 
 .profile-grid {
@@ -1068,7 +1110,8 @@ button {
     letter-spacing: 0.35em;
     text-transform: uppercase;
     font-size: 0.9rem;
-    color: #ff6580;
+    color: var(--accent);
+    /* color: #ff6580; */
 }
 
 .contact-content {
@@ -1313,12 +1356,12 @@ button {
 
     .hero-content {
         position: absolute;
-        top: 42%;
+        top: 55%;
         left: 0;
         right: 0;
         background: linear-gradient(180deg, rgba(0,0,0,0.04) 0%, rgba(0,0,0,0.96) 100%);
         z-index: 2;
-        padding: 2rem 1.4rem 2rem;
+        padding: 1.5rem 1.4rem 0;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -1405,9 +1448,12 @@ button {
         width: calc(100% - 20px);
     }
 
+    .promo-section {
+        margin-top: 20px;
+    }
+
     .hero {
         padding: 0;
-        min-height: 100vh;
     }
 
     .hero-grid {
@@ -1440,13 +1486,15 @@ button {
         right: 0;
         background: linear-gradient(180deg, rgba(0,0,0,0.04) 0%, rgba(0,0,0,0.96) 100%);
         z-index: 2;
-        padding: 2rem 1.4rem 2.5rem;
+        padding: 2rem 1.4rem 0.5rem;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         gap: 1rem;
         min-height: auto;
         margin-top: 0;
+        overflow: visible;
+        max-height: none !important;
     }
 
     .hero-subtitle {
@@ -1521,32 +1569,66 @@ button {
     }
 }
 
-@media (min-width: 300px) and (max-width: 410px) {
+@media (max-width: 390px) {
+    .hero-content {
+        top: 48%;
+        padding: 0.9rem 0.7rem 0;
+        gap: 0.4rem;
+        overflow: visible;
+        max-height: none;
+    }
+
+    .hero-subtitle {
+        font-size: 0.65rem;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+        line-height: 1.1;
+    }
+
+    .hero-quote {
+        font-size: 0.85rem;
+        padding-left: 0.6rem;
+        margin: 0.5rem 0;
+    }
+
+    .hero-badges {
+        gap: 0.25rem;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-badge {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.65rem;
+    }
+
+    .btn-large {
+        padding: 11px 0.7rem;
+        font-size: 0.8rem;
+        margin-top: 0.7rem;
+    }
+}
+
+@media (max-width: 440px) {
     .promo-section {
-        padding: 0.6rem 0 0.8rem;
+        padding: 0.6rem 0 1rem;
     }
 
     .promo-section .section-label-wrapper {
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.25rem;
     }
 
-    .promo-section .section-label,
-    .logo-btn {
-        color: var(--accent) !important;
-    }
-
-    .logo-btn {
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 31, 53, 0.25);
-        box-shadow: none;
+    .video-preview-wrapper {
+        max-width: 100%;
     }
 
     .hero-content {
-        top: 34%;
-        padding: 1rem 0.8rem 1rem;
-        gap: 0.6rem;
-        max-height: none;
+        top: 50%;
+        padding: 1rem 0.8rem 0;
+        gap: 0.5rem;
         overflow: visible;
+        max-height: none;
     }
 
     .hero-subtitle {
@@ -1558,17 +1640,17 @@ button {
     }
 
     .hero-quote {
-        font-size: 0.85rem;
-        padding-left: 0.6rem;
+        font-size: 0.9rem;
+        padding-left: 0.7rem;
     }
 
     .hero-badges {
-        gap: 0.35rem;
+        gap: 0.3rem;
         grid-template-columns: 1fr 1fr;
     }
 
     .hero-badge {
-        padding: 0.3rem 0.6rem;
+        padding: 0.35rem 0.6rem;
         font-size: 0.7rem;
     }
 
@@ -1576,67 +1658,6 @@ button {
         padding: 12px 0.8rem;
         font-size: 0.85rem;
     }
-}
-
-@media (min-width: 411px) and (max-width: 435px) {
-    .promo-section {
-        padding: 0.75rem 0 0.9rem;
-    }
-
-    .promo-section .section-label-wrapper {
-        margin-bottom: 0.2rem;
-    }
-
-    .promo-section .section-label,
-    .logo-btn {
-        color: var(--accent) !important;
-    }
-
-    .logo-btn {
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 31, 53, 0.25);
-        box-shadow: none;
-    }
-
-    .hero-content {
-        top: 35%;
-        padding: 1rem 0.9rem 1rem;
-        gap: 0.65rem;
-        max-height: none;
-        overflow: visible;
-    }
-
-    .hero-subtitle {
-        font-size: 0.72rem;
-    }
-
-    .hero-title {
-        font-size: 1.7rem;
-    }
-
-    .hero-quote {
-        font-size: 0.88rem;
-        padding-left: 0.7rem;
-    }
-
-    .hero-badges {
-        gap: 0.35rem;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .hero-badge {
-        padding: 0.35rem 0.65rem;
-        font-size: 0.72rem;
-    }
-
-    .btn-large {
-        padding: 13px 0.85rem;
-        font-size: 0.87rem;
-    }
-}
-
-.contact-icon img {
-    filter: saturate(1.35) brightness(1.2);
 }
 
 @media (min-width: 676px) {
