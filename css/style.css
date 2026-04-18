@@ -18,6 +18,7 @@
 
 html {
     scroll-behavior: smooth;
+    background: var(--bg);
 }
 
 body {
@@ -27,7 +28,7 @@ body {
     background: var(--bg);
     min-height: 100vh;
     overflow-x: hidden;
-    padding-top: 70px;
+    padding-top: calc(70px + env(safe-area-inset-top));
 }
 
 a {
@@ -132,7 +133,7 @@ button {
 .navbar {
     background: #000000;
     backdrop-filter: blur(20px);
-    padding: 0.8rem 0;
+    padding: calc(0.8rem + env(safe-area-inset-top)) 0 0.8rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -460,15 +461,29 @@ button {
 
 
 .video-preview-wrapper {
-    max-width: 1350px;
+    max-width: 2025px;
     margin: 0 auto;
+    width: 100%;
 }
 
 @media (max-width: 676px) {
     .video-preview-wrapper {
         max-width: 100%;
+        width: calc(100% + 24px);
+        margin-left: -12px;
+        margin-right: -12px;
+        padding: 0 12px;
     }
 }
+
+@media (max-width: 600px) {
+    .video-preview-wrapper {
+        width: calc(100vw + 16px);
+        max-width: calc(100vw + 16px);
+        margin-left: calc(50% - 50vw - 8px);
+        margin-right: calc(50% - 50vw - 8px);
+        padding: 0 8px;
+    }
 }
 
 .video-preview {
@@ -631,8 +646,8 @@ button {
 }
 
 .experience-item {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
+    margin-bottom: 0.9rem;
+    padding-bottom: 0.9rem;
     border-bottom: 1px solid var(--border);
 }
 
@@ -646,7 +661,7 @@ button {
     font-size: 1.1rem;
     font-weight: 700;
     color: var(--text);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
 }
 
 .experience-description {
