@@ -139,9 +139,10 @@ button {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 9999;
     border-bottom: none;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    isolation: isolate;
 }
 
 .navbar-content {
@@ -249,6 +250,7 @@ button {
     padding: 0 0 2rem;
     position: relative;
     overflow: hidden;
+    margin-top: calc(70px + env(safe-area-inset-top));
 }
 
 .hero::before {
