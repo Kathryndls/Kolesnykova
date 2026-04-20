@@ -33,7 +33,19 @@
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-image fade-in-left">
-                    <img src="photo/header.jpg" alt="Kateryna Header">
+                    <picture>
+                        <source
+                            type="image/webp"
+                            srcset="photo/optimized/header-480.webp 480w, photo/optimized/header-768.webp 768w, photo/optimized/header-1200.webp 1200w"
+                            sizes="(max-width: 768px) 100vw, 50vw">
+                        <img
+                            src="photo/optimized/header-1200.webp"
+                            alt="Kateryna Header"
+                            width="1014"
+                            height="1576"
+                            fetchpriority="high"
+                            decoding="async">
+                    </picture>
                 </div>
                 <div class="hero-content fade-in-right">
                     <div class="hero-text">
@@ -59,7 +71,7 @@
             </div>
             <div class="video-preview-wrapper fade-in-up">
                 <div class="video-preview" onclick="openVideoModal('7ottA-FO1Uc')">
-                    <img id="promoThumb" src="https://img.youtube.com/vi/7ottA-FO1Uc/maxresdefault.jpg" alt="Promo Video">
+                    <img id="promoThumb" src="https://img.youtube.com/vi/7ottA-FO1Uc/maxresdefault.jpg" alt="Promo Video" loading="lazy" decoding="async">
                     <div class="play-button">
                         <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
                             <circle cx="40" cy="40" r="38" stroke="white" stroke-width="2"/>
@@ -162,7 +174,7 @@
                 <div class="performance-card fade-in-up" onclick="openVideoModal('WTnIEn-EPHQ')">
                     <h3 class="performance-title">Pole Dance</h3>
                     <div class="performance-preview">
-                        <img src="https://img.youtube.com/vi/WTnIEn-EPHQ/maxresdefault.jpg" alt="Pole Dance">
+                        <img src="https://img.youtube.com/vi/WTnIEn-EPHQ/maxresdefault.jpg" alt="Pole Dance" loading="lazy" decoding="async">
                         <div class="play-button-small">
                             <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
                                 <circle cx="30" cy="30" r="28" stroke="white" stroke-width="2"/>
@@ -175,7 +187,7 @@
                 <div class="performance-card fade-in-up" onclick="openVideoModal('MNyZgq4Gyf4')">
                     <h3 class="performance-title">Hoop Dance</h3>
                     <div class="performance-preview">
-                        <img src="https://img.youtube.com/vi/MNyZgq4Gyf4/hqdefault.jpg" alt="Hoop Dance">
+                        <img src="https://img.youtube.com/vi/MNyZgq4Gyf4/hqdefault.jpg" alt="Hoop Dance" loading="lazy" decoding="async">
                         <div class="play-button-small">
                             <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
                                 <circle cx="30" cy="30" r="28" stroke="white" stroke-width="2"/>
@@ -188,7 +200,7 @@
                 <div class="performance-card fade-in-up" onclick="openVideoModal('Ft_MrdFQIBU')">
                     <h3 class="performance-title">Silks Dance</h3>
                     <div class="performance-preview">
-                        <img src="https://img.youtube.com/vi/Ft_MrdFQIBU/maxresdefault.jpg" alt="Silks Dance">
+                        <img src="https://img.youtube.com/vi/Ft_MrdFQIBU/maxresdefault.jpg" alt="Silks Dance" loading="lazy" decoding="async">
                         <div class="play-button-small">
                             <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
                                 <circle cx="30" cy="30" r="28" stroke="white" stroke-width="2"/>
@@ -201,7 +213,7 @@
                 <div class="performance-card fade-in-up" onclick="openVideoModal('KRRIQXAvViY')">
                     <h3 class="performance-title">Solo Dance</h3>
                     <div class="performance-preview">
-                        <img src="https://img.youtube.com/vi/KRRIQXAvViY/maxresdefault.jpg" alt="Solo Dance">
+                        <img src="https://img.youtube.com/vi/KRRIQXAvViY/maxresdefault.jpg" alt="Solo Dance" loading="lazy" decoding="async">
                         <div class="play-button-small">
                             <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
                                 <circle cx="30" cy="30" r="28" stroke="white" stroke-width="2"/>
@@ -214,7 +226,7 @@
                 <div class="performance-card fade-in-up" onclick="openVideoModal('oXliGodVeAI')">
                     <h3 class="performance-title">Group Dance</h3>
                     <div class="performance-preview">
-                        <img src="https://img.youtube.com/vi/oXliGodVeAI/maxresdefault.jpg" alt="Group Dance">
+                        <img src="https://img.youtube.com/vi/oXliGodVeAI/maxresdefault.jpg" alt="Group Dance" loading="lazy" decoding="async">
                         <div class="play-button-small">
                             <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
                                 <circle cx="30" cy="30" r="28" stroke="white" stroke-width="2"/>
@@ -239,19 +251,49 @@
                 <div class="slider-container">
                     <div class="slider-track">
                         <div class="slide">
-                            <img src="photo/ph-1.jpg" alt="Photo 1">
+                            <picture>
+                                <source
+                                    type="image/webp"
+                                    srcset="photo/optimized/ph-1-640.webp 640w, photo/optimized/ph-1-960.webp 960w, photo/optimized/ph-1-1280.webp 1280w"
+                                    sizes="(max-width: 640px) 84vw, (max-width: 900px) 70vw, 620px">
+                                <img src="photo/optimized/ph-1-1280.webp" alt="Photo 1" width="956" height="1126" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <div class="slide">
-                            <img src="photo/ph-2.jpg" alt="Photo 2">
+                            <picture>
+                                <source
+                                    type="image/webp"
+                                    srcset="photo/optimized/ph-2-640.webp 640w, photo/optimized/ph-2-960.webp 960w, photo/optimized/ph-2-1280.webp 1280w"
+                                    sizes="(max-width: 640px) 84vw, (max-width: 900px) 70vw, 620px">
+                                <img src="photo/optimized/ph-2-1280.webp" alt="Photo 2" width="832" height="1046" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <div class="slide">
-                            <img src="photo/ph-3.jpg" alt="Photo 3">
+                            <picture>
+                                <source
+                                    type="image/webp"
+                                    srcset="photo/optimized/ph-3-640.webp 640w, photo/optimized/ph-3-960.webp 960w, photo/optimized/ph-3-1280.webp 1280w"
+                                    sizes="(max-width: 640px) 84vw, (max-width: 900px) 70vw, 620px">
+                                <img src="photo/optimized/ph-3-1280.webp" alt="Photo 3" width="1068" height="1216" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <div class="slide">
-                            <img src="photo/ph-4.jpg" alt="Photo 4">
+                            <picture>
+                                <source
+                                    type="image/webp"
+                                    srcset="photo/optimized/ph-4-640.webp 640w, photo/optimized/ph-4-960.webp 960w, photo/optimized/ph-4-1280.webp 1280w"
+                                    sizes="(max-width: 640px) 84vw, (max-width: 900px) 70vw, 620px">
+                                <img src="photo/optimized/ph-4-1280.webp" alt="Photo 4" width="1042" height="1392" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                         <div class="slide">
-                            <img src="photo/ph-5.jpg" alt="Photo 5">
+                            <picture>
+                                <source
+                                    type="image/webp"
+                                    srcset="photo/optimized/ph-5-640.webp 640w, photo/optimized/ph-5-960.webp 960w, photo/optimized/ph-5-1280.webp 1280w"
+                                    sizes="(max-width: 640px) 84vw, (max-width: 900px) 70vw, 620px">
+                                <img src="photo/optimized/ph-5-1280.webp" alt="Photo 5" width="1120" height="1284" loading="lazy" decoding="async">
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -272,28 +314,28 @@
             <div class="contact-content fade-in-up">
                 <div class="contact-row">
                     <a href="https://t.me/Kathryn_dls" class="contact-icon telegram" target="_blank" rel="noreferrer">
-                        <img src="icons/telegram.png" alt="Telegram">
+                        <img src="icons/telegram.webp" alt="Telegram" loading="lazy" decoding="async">
                     </a>
                     <a href="viber://chat?number=%2B380638628194" class="contact-icon viber" target="_blank" rel="noreferrer">
-                        <img src="icons/viber.png" alt="Viber">
+                        <img src="icons/viber.webp" alt="Viber" loading="lazy" decoding="async">
                     </a>
                     <a href="https://wa.me/380638628194" class="contact-icon whatsapp" target="_blank" rel="noreferrer">
-                        <img src="icons/whatsapp.png" alt="WhatsApp">
+                        <img src="icons/whatsapp.webp" alt="WhatsApp" loading="lazy" decoding="async">
                     </a>
                     <a href="mailto:kolesnykovakaterina@gmail.com" class="contact-icon email" target="_blank" rel="noreferrer">
-                        <img src="icons/email.png" alt="Email">
+                        <img src="icons/email.webp" alt="Email" loading="lazy" decoding="async">
                     </a>
                 </div>
 
                 <div class="contact-row">
                     <a href="https://www.youtube.com/watch?v=1PXYxzLj6W8" class="contact-icon youtube" target="_blank" rel="noreferrer">
-                        <img src="icons/youtube.png" alt="YouTube">
+                        <img src="icons/youtube.webp" alt="YouTube" loading="lazy" decoding="async">
                     </a>
                     <a href="https://www.instagram.com/reel/DWK5waLgv4B/?igsh=MTBxNHBybWE3ZjE2ZA==" class="contact-icon instagram" target="_blank" rel="noreferrer">
-                        <img src="icons/instagram.png" alt="Instagram">
+                        <img src="icons/instagram.webp" alt="Instagram" loading="lazy" decoding="async">
                     </a>
                     <a href="https://vt.tiktok.com/ZSHb7eU3d" class="contact-icon tiktok" target="_blank" rel="noreferrer">
-                        <img src="icons/tiktok.png" alt="TikTok">
+                        <img src="icons/tiktok.webp" alt="TikTok" loading="lazy" decoding="async">
                     </a>
                 </div>
             </div>
@@ -311,13 +353,13 @@
     <div id="videoModal" class="modal" onclick="closeVideoModal(event)">
         <div class="modal-content">
             <button class="modal-close" onclick="closeVideoModal()">&times;</button>
-            <iframe id="videoFrame" width="100%" height="100%" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="videoFrame" width="100%" height="100%" src="" style="border: 0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 
     <!-- Lightbox (removed - now using slider) -->
 
-    <script src="js/script.js"></script>
+    <script type="module" src="js/script.js"></script>
 </body>
 </html>
 
