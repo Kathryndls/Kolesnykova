@@ -1,0 +1,26 @@
+{
+  "name": "kolesnykova",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "optimize:images": "node scripts/optimize-images.mjs",
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview",
+    "perf:report": "node scripts/report-metrics.mjs",
+    "perf:budgets": "node scripts/check-budgets.mjs",
+    "perf:verify": "npm run build && npm run perf:report && npm run perf:budgets"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-personal:Kathryndls/Kolesnykova.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sharp": "^0.34.5",
+    "vite": "^8.0.9"
+  }
+}

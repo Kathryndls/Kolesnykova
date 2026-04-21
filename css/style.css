@@ -1502,3 +1502,37 @@ button {
     background: none;
     border: none;
 }
+
+/* Reduce animation and expensive effects when user prefers lower motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition-duration: 0.01ms !important;
+        transition-delay: 0ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .video-preview:hover img,
+    .performance-card:hover,
+    .performance-card:hover .performance-preview img,
+    .slider-btn:hover,
+    .slide:hover img {
+        transform: none !important;
+    }
+}
+
+/* Limit expensive blur effects on touch/mobile devices */
+@media (max-width: 768px) {
+    .navbar,
+    .slider-btn,
+    .modal {
+        backdrop-filter: none;
+    }
+
+    .stat-item,
+    .detail-section {
+        backdrop-filter: none;
+    }
+}
